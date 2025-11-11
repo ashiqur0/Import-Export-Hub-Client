@@ -36,8 +36,8 @@ const Navbar = () => {
                     user && <>
                         <button  className="btn">Log out</button>
                     </> || <div className='flex gap-3'>
-                        <Link to='/signup' className="btn">SignUp</Link>
-                        <Link to='/login' className="btn">Login</Link>
+                        <NavLink to='/signup' className="btn">SignUp</NavLink>
+                        <NavLink to='/login' className="btn">Login</NavLink>
                     </div>
                 }
             </div>
