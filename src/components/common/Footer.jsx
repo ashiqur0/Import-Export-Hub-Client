@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
+import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className='px-4 py-5'>
+        <footer className='px-4 py-56'>
             <div className='grid md:grid-cols-30 justify-between gap-6 mb-10'>
-                <div className='col-span-10'>
+                <div className='col-span-9'>
                     <h1 className='text-xl font-semibold mb-1'>Company Info</h1>
                     <p>Import Export Hub is a modern online platform that connects global exporters and importers. Manage your exports, explore international products, and import what you love — all from one dashboard.</p>
                 </div>
@@ -29,7 +31,7 @@ const Footer = () => {
                     <p>✉️ Email: support@importexporthub.com</p>
                 </div>
 
-                <div className='col-span-6'>
+                <div className='col-span-7'>
                     <h1 className='text-xl font-semibold mb-1'>Additional Info</h1>
                     <p>Business Hours:</p>
                     <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
@@ -41,10 +43,10 @@ const Footer = () => {
                 <div className='col-span-4'>
                     <h1 className='text-xl font-semibold mb-1'>Social Links</h1>
                     <div className='flex gap-2'>
-                        <p>F</p>
-                        <p>X</p>
-                        <p>I</p>
-                        <p>L</p>
+                        <FaFacebook size={20} />
+                        <FaXTwitter size={20} />
+                        <FaInstagramSquare size={20} />
+                        <FaLinkedin size={20} />
                     </div>
                 </div>
             </div>

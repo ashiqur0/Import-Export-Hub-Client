@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, Links, NavLink } from 'react-router';
+import '../../App.css'
+import logo from '../../assets/logo.png'
 
 const Navbar = () => {
     const links = <>
@@ -24,7 +26,11 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost text-xl">Import Export Hub</Link>
+
+                <Link to='/' className='flex justify-center gap-3 text-xl font-semibold'>
+                    <img src={logo} alt="logo" className='w-7 h-7'/>
+                    <h1>Import Export Hub</h1>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 flex gap-4">
@@ -34,10 +40,10 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user && <>
-                        <button  className="btn">Log out</button>
+                        <button className="btn">Log out</button>
                     </> || <div className='flex gap-3'>
-                        <NavLink to='/signup' className="btn">SignUp</NavLink>
-                        <NavLink to='/login' className="btn">Login</NavLink>
+                        <NavLink to='/signup'><button>SignUp</button></NavLink>
+                        <NavLink to='/login'><button>Login</button></NavLink>
                     </div>
                 }
             </div>

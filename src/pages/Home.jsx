@@ -1,9 +1,16 @@
 import React from 'react';
+import Banner from '../components/home/Banner';
+import LatestProducts from '../components/home/LatestProducts';
+import GlobalTraders from '../components/home/GlobalTraders';
+import TopExportsCategory from '../components/home/TopExportsCategory';
 
 const Home = () => {
     return (
-        <div>
-            <h1>Home page</h1>
+        <div className=''>
+            <Banner />
+            <LatestProducts />
+            <TopExportsCategory />
+            <GlobalTraders />
         </div>
     );
 };
