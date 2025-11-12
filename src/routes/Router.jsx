@@ -17,13 +17,13 @@ const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home,
-                loader: () => fetch('/product.json'),
+                loader: () => fetch('http://localhost:5000/latest-products'),
                 hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: '/allProducts',
                 Component: AllProducts,
-                loader: () => fetch('/product.json'),
+                loader: () => fetch('http://localhost:5000/products'),
                 hydrateFallbackElement: <Loading></Loading>
             },
             {

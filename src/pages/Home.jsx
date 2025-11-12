@@ -10,9 +10,9 @@ const Home = () => {
 
     return (
         <div className=''>
-            <Banner data={data}></Banner>
+            <Banner data={data} />
             <div className='w-7xl mx-auto'>
-                <LatestProducts />
+                <LatestProducts data={data} />
                 <TopExportsCategory />
                 <GlobalTraders />
             </div>
