@@ -14,7 +14,7 @@ const Navbar = () => {
     const user = false;
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar w-7xl mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
                 </div>
 
                 <Link to='/' className='flex justify-center gap-3 text-xl font-semibold'>
-                    <img src={logo} alt="logo" className='w-7 h-7'/>
+                    <img src={logo} alt="logo" className='w-8 h-8'/>
                     <h1>Import Export Hub</h1>
                 </Link>
             </div>

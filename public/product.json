@@ -1,0 +1,162 @@
+[
+  {
+    "productImage": "https://i.ibb.co.com/6Jfk59k4/Premium-Basmati-Rice.jpg",
+    "productName": "Premium Basmati Rice",
+    "price": 48.99,
+    "originCountry": "India",
+    "rating": 4.7,
+    "availableQuantity": 1200
+  },
+  {
+    "productImage": "https://i.ibb.co.com/CSnKYpd/Bangladeshi-Jute-Bag.jpg",
+    "productName": "Bangladeshi Jute Bag",
+    "price": 9.99,
+    "originCountry": "Bangladesh",
+    "rating": 4.5,
+    "availableQuantity": 350
+  },
+  {
+    "productImage": "https://i.ibb.co.com/Q7t3C1qg/German-Kitchen-Knife-Set.jpg",
+    "productName": "German Kitchen Knife Set",
+    "price": 79.50,
+    "originCountry": "Germany",
+    "rating": 4.8,
+    "availableQuantity": 220
+  },
+  {
+    "productImage": "https://i.ibb.co.com/j9jSsFMQ/Organic-Green-Tea-Pack.jpg",
+    "productName": "Organic Green Tea Pack",
+    "price": 24.00,
+    "originCountry": "China",
+    "rating": 4.3,
+    "availableQuantity": 860
+  },
+  {
+    "productImage": "https://i.ibb.co.com/6cSGDTyk/Brazilian-Coffee-Beans.jpg",
+    "productName": "Brazilian Coffee Beans",
+    "price": 39.95,
+    "originCountry": "Brazil",
+    "rating": 4.9,
+    "availableQuantity": 500
+  },
+  {
+    "productImage": "https://i.ibb.co.com/wF4tChVg/Egyptian-Cotton-Bedsheet.jpg",
+    "productName": "Egyptian Cotton Bedsheet",
+    "price": 59.99,
+    "originCountry": "Egypt",
+    "rating": 4.6,
+    "availableQuantity": 430
+  },
+  {
+    "productImage": "https://i.ibb.co.com/8nv41R5s/Italian-Leather-Wallet.jpg",
+    "productName": "Italian Leather Wallet",
+    "price": 45.00,
+    "originCountry": "Italy",
+    "rating": 4.7,
+    "availableQuantity": 280
+  },
+  {
+    "productImage": "https://i.ibb.co.com/kWMhg3F/Japanese-Ceramic-Tea-Set.jpg",
+    "productName": "Japanese Ceramic Tea Set",
+    "price": 65.50,
+    "originCountry": "Japan",
+    "rating": 4.9,
+    "availableQuantity": 150
+  },
+  {
+    "productImage": "https://i.ibb.co.com/MkK4J5bD/Turkish-Handmade-Carpet.jpg",
+    "productName": "Turkish Handmade Carpet",
+    "price": 210.00,
+    "originCountry": "Turkey",
+    "rating": 4.8,
+    "availableQuantity": 75
+  },
+  {
+    "productImage": "https://i.ibb.co.com/gLBFK5Bd/American-Smartwatch.jpg",
+    "productName": "American Smartwatch",
+    "price": 129.99,
+    "originCountry": "USA",
+    "rating": 4.4,
+    "availableQuantity": 950
+  },
+  {
+    "productImage": "https://i.ibb.co.com/BHsxfw7v/South-Korean-LED-Monitor.jpg",
+    "productName": "South Korean LED Monitor",
+    "price": 189.99,
+    "originCountry": "South Korea",
+    "rating": 4.6,
+    "availableQuantity": 640
+  },
+  {
+    "productImage": "https://i.ibb.co.com/zTqhWX6q/French-Perfume-Set.jpg",
+    "productName": "French Perfume Set",
+    "price": 75.50,
+    "originCountry": "France",
+    "rating": 4.9,
+    "availableQuantity": 320
+  },
+  {
+    "productImage": "https://i.ibb.co.com/mVrVtKq0/Canadian-Maple-Syrup.jpg",
+    "productName": "Canadian Maple Syrup",
+    "price": 22.49,
+    "originCountry": "Canada",
+    "rating": 4.8,
+    "availableQuantity": 720
+  },
+  {
+    "productImage": "https://i.ibb.co.com/m59nqnLQ/Mexican-Handmade-Pottery.jpg",
+    "productName": "Mexican Handmade Pottery",
+    "price": 38.25,
+    "originCountry": "Mexico",
+    "rating": 4.5,
+    "availableQuantity": 270
+  },
+  {
+    "productImage": "https://i.ibb.co.com/9HD5rr5j/Swiss-Wrist-Watch.jpg",
+    "productName": "Swiss Wrist Watch",
+    "price": 249.99,
+    "originCountry": "Switzerland",
+    "rating": 4.9,
+    "availableQuantity": 180
+  },
+  {
+    "productImage": "https://i.ibb.co.com/TMLcv061/Thai-Silk-Scarf.jpg",
+    "productName": "Thai Silk Scarf",
+    "price": 34.99,
+    "originCountry": "Thailand",
+    "rating": 4.4,
+    "availableQuantity": 500
+  },
+  {
+    "productImage": "https://i.ibb.co.com/5X54w1LZ/Indonesian-Wooden-Sculpture.jpg",
+    "productName": "Indonesian Wooden Sculpture",
+    "price": 55.00,
+    "originCountry": "Indonesia",
+    "rating": 4.7,
+    "availableQuantity": 150
+  },
+  {
+    "productImage": "https://i.ibb.co.com/4Z083ng5/Spanish-Olive-Oil.jpg",
+    "productName": "Spanish Olive Oil",
+    "price": 27.99,
+    "originCountry": "Spain",
+    "rating": 4.8,
+    "availableQuantity": 940
+  },
+  {
+    "productImage": "https://i.ibb.co.com/3yHQ1K7p/Australian-Wool-Blanket.jpg",
+    "productName": "Australian Wool Blanket",
+    "price": 89.00,
+    "originCountry": "Australia",
+    "rating": 4.6,
+    "availableQuantity": 360
+  },
+  {
+    "productImage": "https://i.ibb.co.com/992qTLWg/Pakistani-Leather-Jacket.jpg",
+    "productName": "Pakistani Leather Jacket",
+    "price": 119.99,
+    "originCountry": "Pakistan",
+    "rating": 4.5,
+    "availableQuantity": 210
+  }
+]

@@ -7,6 +7,7 @@ import MyImports from "../pages/MyImports";
 import AddExport from "../pages/AddExport";
 import SignUp from "../pages/SignUp";
 import Login from "../pages/Login";
+import Loading from "../components/common/Loading";
 
 const router = createBrowserRouter([
     {
@@ -15,11 +16,15 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: Home
+                Component: Home,
+                loader: () => fetch('/product.json'),
+                hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: '/allProducts',
-                Component: AllProducts
+                Component: AllProducts,
+                loader: () => fetch('/product.json'),
+                hydrateFallbackElement: <Loading></Loading>
             },
             {
                 path: '/myExports',

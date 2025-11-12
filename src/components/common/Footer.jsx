@@ -5,7 +5,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className='px-4 py-56'>
+        <footer className='px-4 py-10 w-7xl mx-auto'>
             <div className='grid md:grid-cols-30 justify-between gap-6 mb-10'>
                 <div className='col-span-9'>
                     <h1 className='text-xl font-semibold mb-1'>Company Info</h1>
