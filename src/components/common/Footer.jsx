@@ -5,11 +5,11 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <footer className='px-4 py-10 w-7xl mx-auto'>
+        <footer className='px-4 py-10 max-w-7xl md:mx-auto'>
             <div className='grid md:grid-cols-30 justify-between gap-6 mb-10'>
-                <div className='col-span-9'>
+                <div className='col-span-9 '>
                     <h1 className='text-xl font-semibold mb-1'>Company Info</h1>
-                    <p>Import Export Hub is a modern online platform that connects global exporters and importers. Manage your exports, explore international products, and import what you love — all from one dashboard.</p>
+                    <p className=''>Import Export Hub is a modern online platform that connects global exporters and importers. Manage your exports, explore international products, and import what you love — all from one dashboard.</p>
                 </div>
 
                 <div className='col-span-4'>

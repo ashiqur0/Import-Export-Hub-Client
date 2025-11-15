@@ -1,53 +1,110 @@
-import React from 'react';
-import { Link, Links, NavLink } from 'react-router';
-import '../../App.css'
-import logo from '../../assets/logo.png'
+import React, { use, useState } from 'react';
+import logo from '/logo.png'
+import { IoCloseOutline } from 'react-icons/io5';
+import { CiMenuFries } from 'react-icons/ci';
+import { Link, NavLink } from 'react-router';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
+import AuthContext from '../../context/AuthContext';
 
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
+    const { user, logOut } = use(AuthContext);
+
     const links = <>
-        <NavLink to='/allProducts'>All Products</NavLink>
-        <NavLink to='/myExports'>My Exports</NavLink>
-        <NavLink to='/myImports'>My Imports</NavLink>
-        <NavLink to='/addExports'>Add Export</NavLink>
+        <NavLink to='/allProducts'>AllProducts</NavLink>
+        <NavLink to='/myExports'>MyExports</NavLink>
+        <NavLink to='/myImports'>MyImports</NavLink>
+        <NavLink to='/addExports'>AddExport</NavLink>
     </>
 
-    const user = false;
+    const handleLogOut = () => {
+        return logOut()
+            .then(() => {
+                toast.success('Success Logout...');
+            })
+            .catch(error => {
+                toast.error('Logout Failed with: ', error.code);
+            })
+    }
 
     return (
-        <div className="navbar w-7xl mx-auto">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+        <section className='p-4 shadow-md shadow-slate-900 bg-slate-900 '>
+            <nav className='md:flex justify-between items-center max-w-7xl mx-auto'>
+                <div className='flex justify-between items-center cursor-pointer'>
+
+                    {/* Logo and Brand Name Link to Home Page */}
+                    <Link to='/' className='flex items-center gap-3 md:gap-3'>
+                        <img className='w-7 lg:w-10' src={logo} alt="" />
+                        <h1 className='font-inter font-xl lg:text-2xl font-bold'>Import Export Hub</h1>
+                    </Link>
+
+                    {/* PopUp Icons for Mobile Screen */}
+                    <div className='md:hidden cursor-pointer mr-2'
+                        onClick={() => setOpen(!open)}>
+                        {open ? <IoCloseOutline /> : <CiMenuFries />}
                     </div>
-                    <ul
-                        tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+
+                    <ul className={`z-10 w-full text-center md:hidden flex flex-col absolute duration-1000 hover:shadow-sm py-1 rounded-sm bg-slate-900 px-4 text-white text-md
+                        ${open ? 'top-16 right-0' : '-top-64 right-0'}
+                        `}>{links}
+                        {
+                            user ? <>
+                                <Link to='/'><button onClick={handleLogOut}>Logout</button></Link>
+                            </>
+                                :
+                                <>
+                                    <NavLink to='/signup'>Signup</NavLink>
+                                    <NavLink to='/login'>Login</NavLink>
+                                </>
+                        }
+                    </ul>
+                </div>
+
+                <div>
+                    <ul className='md:flex hidden gap-8 font-semibold text-white'>
                         {links}
                     </ul>
                 </div>
 
-                <Link to='/' className='flex justify-center gap-3 text-xl font-semibold'>
-                    <img src={logo} alt="logo" className='w-8 h-8'/>
-                    <h1>Import Export Hub</h1>
-                </Link>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 flex gap-4">
-                    {links}
-                </ul>
-            </div>
-            <div className="navbar-end">
-                {
-                    user && <>
-                        <button className="btn">Log out</button>
-                    </> || <div className='flex gap-3'>
-                        <NavLink to='/signup'><button>SignUp</button></NavLink>
-                        <NavLink to='/login'><button>Login</button></NavLink>
-                    </div>
-                }
-            </div>
-        </div>
+                <div className='md:flex hidden gap-3'>
+                    {
+                        user ? <>
+                            <NavLink
+                                // onClick={handleLogOut}
+                                to='/' className="py-2 rounded-sm font-semibold hover:bg-slate-800 px-10 bg-slate-900"
+                            >
+                                <button onClick={handleLogOut}>Logout</button></NavLink>
+                            <Link
+                                to='/'
+                                className='w-10 border border-green-500 rounded-full ml-3 cursor-pointer'
+                            >
+                                <img
+                                    className='rounded-full'
+                                    src={`${user ? user?.photoURL : "https://img.icons8.com/?size=100&id=42384&format=png&color=000000"}`} title={user.displayName} />
+                            </Link>
+                        </>
+                            :
+                            <>
+                                <Link to='/login' className="py-2 rounded-sm font-semibold hover:bg-slate-800 px-2 bg-slate-900"><button>Login</button></Link>
+                                <Link to='/signup' className="py-2 rounded-sm font-semibold hover:bg-slate-800 px-2 bg-slate-900"><button>Signup</button></Link>
+                            </>
+                    }
+                </div>
+            </nav>
+            <ToastContainer
+                position="top-right"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+                transition={Bounce}
+            />
+        </section>
     );
 };
 

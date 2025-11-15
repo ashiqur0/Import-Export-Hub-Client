@@ -5,8 +5,8 @@ const LatestProducts = ({data}) => {
     console.log(data);
 
     return (
-        <div className='max-w-7xl mx-2 md:mx-auto my-10'>
-            <h1 className='md:text-3xl text-2xl font-semibold mb-5'>Latest products Component</h1>
+        <div className='my-10'>
+            <h1 className='md:text-3xl text-2xl font-semibold mb-5'>Latest products</h1>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                 {

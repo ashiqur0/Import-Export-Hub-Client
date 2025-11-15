@@ -19,9 +19,9 @@ const Products = ({ product }) => {
                 <h2 className="card-title">{productName}</h2>
                 <p>Country origin: {originCountry}</p>
                 <p>Available: {availableQuantity}</p>
-                <div className='flex justify-between'>
+                <div className='flex justify-between items-center'>
                     <p>Price: ${price}</p>
-                    <div className='flex items-center gap-2'>
+                    <div className='flex items-center gap-2 justify-center'>
                         <FaStar />
                         <p>{rating}</p>
                     </div>
