@@ -71,7 +71,7 @@ const Navbar = () => {
                         user ? <>
                             <NavLink
                                 // onClick={handleLogOut}
-                                to='/' className="py-2 rounded-sm font-semibold hover:bg-slate-800 px-10 bg-slate-900"
+                                to='/' className="rounded-sm font-semibold hover:bg-slate-800 bg-slate-900"
                             >
                                 <button onClick={handleLogOut}>Logout</button></NavLink>
                             <Link
@@ -79,14 +79,14 @@ const Navbar = () => {
                                 className='w-10 border border-green-500 rounded-full ml-3 cursor-pointer'
                             >
                                 <img
-                                    className='rounded-full'
-                                    src={`${user ? user?.photoURL : "https://img.icons8.com/?size=100&id=42384&format=png&color=000000"}`} title={user.displayName} />
+                                    className='rounded-full w-8 h-8'
+                                    src={`${user && user?.photoURL}` } title={user.displayName} />
                             </Link>
                         </>
                             :
                             <>
-                                <Link to='/login' className="py-2 rounded-sm font-semibold hover:bg-slate-800 px-2 bg-slate-900"><button>Login</button></Link>
-                                <Link to='/signup' className="py-2 rounded-sm font-semibold hover:bg-slate-800 px-2 bg-slate-900"><button>Signup</button></Link>
+                                <Link to='/login' className="rounded-sm font-semibold hover:bg-slate-800 bg-slate-900"><button>Login</button></Link>
+                                <Link to='/signup' className="rounded-sm font-semibold hover:bg-slate-800 bg-slate-900"><button>Signup</button></Link>
                             </>
                     }
                 </div>

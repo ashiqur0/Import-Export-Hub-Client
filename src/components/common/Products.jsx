@@ -27,7 +27,7 @@ const Products = ({ product }) => {
                     </div>
                 </div>
                 {/* to={`${user? `/auth/productDetails/${_id}`:'/auth/login'}`} */}
-                <Link className="card-actions ">
+                <Link to={`products/productsDetails/${product._id}`} className="card-actions ">
                     <button className='btn btn-primary w-full'>See Details</button>
                 </Link>
             </div>

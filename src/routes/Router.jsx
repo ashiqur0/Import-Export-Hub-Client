@@ -8,6 +8,7 @@ import AddExport from "../pages/AddExport";
 import SignUp from "../pages/SignUp";
 import Login from "../pages/Login";
 import Loading from "../components/common/Loading";
+import ProductDetails from "../pages/ProductDetails";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 Component: Login
+            },
+            {
+                path: '/products/productsDetails/:id',
+                Component: ProductDetails
             }
         ]
     }
