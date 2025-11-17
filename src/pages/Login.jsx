@@ -1,10 +1,13 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import AuthContext from '../context/AuthContext';
 
 const Login = () => {
 
     const { googleSignIn, loginWithEmail } = use(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(location.state);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -16,6 +19,7 @@ const Login = () => {
         loginWithEmail(email, password)
         .then(() => {
             console.log('success');
+            navigate(`${location.state ? location.state : '/'}`);
         })
         .then((error) => {
             console.log('error', error);
@@ -25,7 +29,8 @@ const Login = () => {
     const handleSignInWithGoogle = () => {
         googleSignIn()
         .then(() => {
-            console.log('success')
+            console.log('success');
+            navigate(`${location.state && location.state || '/'}`);
         })
         .catch((err) => {
             console.log("erro",err);
@@ -69,7 +74,7 @@ const Login = () => {
                             Login with Google
                         </div>
 
-                        <p>Don't have an account? <Link to='/signup'><span className='text-blue-500'>signup</span></Link></p>
+                        <p>Don't have an account? <Link to='/signup' state={location.state}><span className='text-blue-500'>signup</span></Link></p>
                     </fieldset>
                 </form>
             </div>

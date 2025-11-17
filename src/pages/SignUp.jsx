@@ -1,23 +1,27 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import AuthContext from '../context/AuthContext';
 
 const SignUp = () => {
 
     const { signupWithEmail, googleSignIn } = use(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(location.state);
 
     const handleSignup = (e) => {
         e.preventDefault();
 
-        const name = e.target.name.value;
+        // const name = e.target.name.value;
         const email = e.target.email.value;
-        const photo = e.target.photo.value;
+        // const photo = e.target.photo.value;
         const password = e.target.password.value;
 
         signupWithEmail(email, password)
             .then(result => {
                 console.log(result);
                 alert('sign up success');
+                navigate(`${location.state ? location.state : '/'}`);
             })
             .catch(error => {
                 console.log(error);
@@ -29,6 +33,7 @@ const SignUp = () => {
         googleSignIn()
             .then(() => {
                 alert('sign in with google');
+                navigate(`${location.state ? location.state : '/'}`);
             })
             .catch((err) => {
                 alert(err);
