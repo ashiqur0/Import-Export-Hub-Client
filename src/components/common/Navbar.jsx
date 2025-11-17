@@ -11,10 +11,15 @@ const Navbar = () => {
     const { user, logOut } = use(AuthContext);
 
     const links = <>
+        <NavLink to='/'>Home</NavLink>
         <NavLink to='/allProducts'>AllProducts</NavLink>
-        <NavLink to='/myExports'>MyExports</NavLink>
-        <NavLink to='/myImports'>MyImports</NavLink>
-        <NavLink to='/addExports'>AddExport</NavLink>
+        {
+            user && <>
+                <NavLink to='/myExports'>MyExports</NavLink>
+                <NavLink to='/myImports'>MyImports</NavLink>
+                <NavLink to='/addExports'>AddExport</NavLink>
+            </>
+        }
     </>
 
     const handleLogOut = () => {
@@ -80,7 +85,7 @@ const Navbar = () => {
                             >
                                 <img
                                     className='rounded-full w-8 h-8'
-                                    src={`${user && user?.photoURL}` } title={user.displayName} />
+                                    src={`${user && user?.photoURL}`} title={user.displayName} />
                             </Link>
                         </>
                             :
