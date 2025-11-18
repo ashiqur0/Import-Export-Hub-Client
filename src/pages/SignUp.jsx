@@ -12,9 +12,9 @@ const SignUp = () => {
     const handleSignup = (e) => {
         e.preventDefault();
 
-        // const name = e.target.name.value;
+        const name = e.target.name.value;
         const email = e.target.email.value;
-        // const photo = e.target.photo.value;
+        const photo = e.target.photo.value;
         const password = e.target.password.value;
 
         signupWithEmail(email, password)

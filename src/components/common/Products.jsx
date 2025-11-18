@@ -4,7 +4,8 @@ import { Link } from 'react-router';
 
 const Products = ({ product }) => {
     // const {user} = use(AuthContext);
-    const { productImage, productName, price, originCountry, rating, availableQuantity } = product;
+    const { _id, productImage, productName, price, originCountry, rating, availableQuantity } = product;
+    // console.log(product);
 
     return (
         <div className="card w-full shadow-md p-4 flex flex-col justify-between bg-slate-800 border border-slate-700">
@@ -27,7 +28,7 @@ const Products = ({ product }) => {
                     </div>
                 </div>
                 {/* to={`${user? `/auth/productDetails/${_id}`:'/auth/login'}`} */}
-                <Link to={`products/productsDetails/${product._id}`} className="card-actions ">
+                <Link to={`/products/productsDetails/${_id}`} className="card-actions ">
                     <button className='btn btn-primary w-full'>See Details</button>
                 </Link>
             </div>

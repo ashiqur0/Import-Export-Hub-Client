@@ -5,7 +5,10 @@
     "price": 48.99,
     "originCountry": "India",
     "rating": 4.7,
-    "availableQuantity": 1200
+    "availableQuantity": 1200,
+    "product_description": "Premium-quality Basmati rice known for its long grains, soft texture, and fragrant aroma. Perfect for biryani, pulao, and special dishes, it cooks fluffy and non-sticky.",
+    "exporter_name": "Golden Grain Exports",
+    "exporter_image": "https://i.ibb.co.com/mJ3kHzK/exporter1.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/CSnKYpd/Bangladeshi-Jute-Bag.jpg",
@@ -13,7 +16,10 @@
     "price": 9.99,
     "originCountry": "Bangladesh",
     "rating": 4.5,
-    "availableQuantity": 350
+    "availableQuantity": 350,
+    "product_description": "Eco-friendly Bangladeshi jute bag crafted from natural fibers. Durable, stylish, and reusable, ideal for daily shopping, carrying essentials, and reducing plastic waste.",
+    "exporter_name": "Dhaka Natural Crafts",
+    "exporter_image": "https://i.ibb.co.com/9QgkfsR/exporter2.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/Q7t3C1qg/German-Kitchen-Knife-Set.jpg",
@@ -21,7 +27,10 @@
     "price": 79.50,
     "originCountry": "Germany",
     "rating": 4.8,
-    "availableQuantity": 220
+    "availableQuantity": 220,
+    "product_description": "High-precision German kitchen knife set made with stainless steel. Sharp, durable, and ergonomically designed for professional chefs and home cooking enthusiasts.",
+    "exporter_name": "Berlin Steel Works",
+    "exporter_image": "https://i.ibb.co.com/NVP2RvJ/exporter3.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/j9jSsFMQ/Organic-Green-Tea-Pack.jpg",
@@ -29,7 +38,10 @@
     "price": 24.00,
     "originCountry": "China",
     "rating": 4.3,
-    "availableQuantity": 860
+    "availableQuantity": 860,
+    "product_description": "Premium organic green tea sourced from high-altitude Chinese plantations. Rich in antioxidants, offering a refreshing taste and natural health benefits.",
+    "exporter_name": "Yunnan Tea Traders",
+    "exporter_image": "https://i.ibb.co.com/J973hZC/exporter4.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/6cSGDTyk/Brazilian-Coffee-Beans.jpg",
@@ -37,7 +49,10 @@
     "price": 39.95,
     "originCountry": "Brazil",
     "rating": 4.9,
-    "availableQuantity": 500
+    "availableQuantity": 500,
+    "product_description": "Premium roasted Brazilian coffee beans known for rich aroma, smooth flavor, and bold character. Ideal for espresso, cappuccino, and gourmet brewing.",
+    "exporter_name": "Rio Coffee Export House",
+    "exporter_image": "https://i.ibb.co.com/DfdyFbW/exporter5.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/wF4tChVg/Egyptian-Cotton-Bedsheet.jpg",
@@ -45,7 +60,10 @@
     "price": 59.99,
     "originCountry": "Egypt",
     "rating": 4.6,
-    "availableQuantity": 430
+    "availableQuantity": 430,
+    "product_description": "Luxurious Egyptian cotton bedsheet offering unmatched softness, breathability, and long-lasting comfort. Perfect for premium home bedding.",
+    "exporter_name": "Cairo Textile Group",
+    "exporter_image": "https://i.ibb.co.com/ykgwkZf/exporter6.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/8nv41R5s/Italian-Leather-Wallet.jpg",
@@ -53,7 +71,10 @@
     "price": 45.00,
     "originCountry": "Italy",
     "rating": 4.7,
-    "availableQuantity": 280
+    "availableQuantity": 280,
+    "product_description": "Handcrafted Italian leather wallet known for elegance, durability, and premium craftsmanship. Features multiple compartments for daily convenience.",
+    "exporter_name": "Milano Leather Co.",
+    "exporter_image": "https://i.ibb.co.com/ZhPsdp4/exporter7.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/kWMhg3F/Japanese-Ceramic-Tea-Set.jpg",
@@ -61,7 +82,10 @@
     "price": 65.50,
     "originCountry": "Japan",
     "rating": 4.9,
-    "availableQuantity": 150
+    "availableQuantity": 150,
+    "product_description": "Traditional Japanese ceramic tea set featuring elegant artwork and fine craftsmanship. Ideal for tea ceremonies and home décor.",
+    "exporter_name": "Kyoto Ceramics Export",
+    "exporter_image": "https://i.ibb.co.com/7YGdG5g/exporter8.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/MkK4J5bD/Turkish-Handmade-Carpet.jpg",
@@ -69,7 +93,10 @@
     "price": 210.00,
     "originCountry": "Turkey",
     "rating": 4.8,
-    "availableQuantity": 75
+    "availableQuantity": 75,
+    "product_description": "Authentic Turkish handmade carpet crafted with premium wool. Features traditional patterns, vibrant colors, and long-lasting quality.",
+    "exporter_name": "Ankara Carpet Traders",
+    "exporter_image": "https://i.ibb.co.com/vHxJqcV/exporter9.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/gLBFK5Bd/American-Smartwatch.jpg",
@@ -77,7 +104,10 @@
     "price": 129.99,
     "originCountry": "USA",
     "rating": 4.4,
-    "availableQuantity": 950
+    "availableQuantity": 950,
+    "product_description": "Feature-rich American smartwatch offering fitness tracking, notifications, long battery life, and stylish design. Compatible with major smartphone systems.",
+    "exporter_name": "TechWave USA",
+    "exporter_image": "https://i.ibb.co.com/z5XCwsF/exporter10.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/BHsxfw7v/South-Korean-LED-Monitor.jpg",
@@ -85,7 +115,10 @@
     "price": 189.99,
     "originCountry": "South Korea",
     "rating": 4.6,
-    "availableQuantity": 640
+    "availableQuantity": 640,
+    "product_description": "High-performance LED monitor from South Korea, offering vibrant colors, sharp resolution, and smooth refresh rates for gaming and work.",
+    "exporter_name": "Seoul Display Industries",
+    "exporter_image": "https://i.ibb.co.com/3kHgPFj/exporter11.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/zTqhWX6q/French-Perfume-Set.jpg",
@@ -93,7 +126,10 @@
     "price": 75.50,
     "originCountry": "France",
     "rating": 4.9,
-    "availableQuantity": 320
+    "availableQuantity": 320,
+    "product_description": "Elegant French perfume set crafted by expert perfumers. Features long-lasting fragrances with premium natural ingredients.",
+    "exporter_name": "Paris Aroma House",
+    "exporter_image": "https://i.ibb.co.com/KGSSFYR/exporter12.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/mVrVtKq0/Canadian-Maple-Syrup.jpg",
@@ -101,7 +137,10 @@
     "price": 22.49,
     "originCountry": "Canada",
     "rating": 4.8,
-    "availableQuantity": 720
+    "availableQuantity": 720,
+    "product_description": "Pure Canadian maple syrup with rich flavor and natural sweetness. Perfect for pancakes, desserts, and gourmet cooking.",
+    "exporter_name": "Maple Valley Exports",
+    "exporter_image": "https://i.ibb.co.com/0yXB7KK/exporter13.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/m59nqnLQ/Mexican-Handmade-Pottery.jpg",
@@ -109,7 +148,10 @@
     "price": 38.25,
     "originCountry": "Mexico",
     "rating": 4.5,
-    "availableQuantity": 270
+    "availableQuantity": 270,
+    "product_description": "Colorful Mexican handmade pottery featuring traditional artwork. Ideal for home décor, gifting, and cultural collections.",
+    "exporter_name": "Casa Artisans Mexico",
+    "exporter_image": "https://i.ibb.co.com/ZWNs9LF/exporter14.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/9HD5rr5j/Swiss-Wrist-Watch.jpg",
@@ -117,7 +159,10 @@
     "price": 249.99,
     "originCountry": "Switzerland",
     "rating": 4.9,
-    "availableQuantity": 180
+    "availableQuantity": 180,
+    "product_description": "Premium Swiss wristwatch featuring precision engineering, elegant design, and long-lasting durability. A perfect luxury accessory.",
+    "exporter_name": "Zurich Timepieces",
+    "exporter_image": "https://i.ibb.co.com/QJ6R2WY/exporter15.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/TMLcv061/Thai-Silk-Scarf.jpg",
@@ -125,7 +170,10 @@
     "price": 34.99,
     "originCountry": "Thailand",
     "rating": 4.4,
-    "availableQuantity": 500
+    "availableQuantity": 500,
+    "product_description": "Elegant Thai silk scarf handcrafted with vibrant colors and smooth texture. Suitable for fashion styling and premium gifting.",
+    "exporter_name": "Bangkok Silk Traders",
+    "exporter_image": "https://i.ibb.co.com/VVpzmH8/exporter16.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/5X54w1LZ/Indonesian-Wooden-Sculpture.jpg",
@@ -133,7 +181,10 @@
     "price": 55.00,
     "originCountry": "Indonesia",
     "rating": 4.7,
-    "availableQuantity": 150
+    "availableQuantity": 150,
+    "product_description": "Beautiful Indonesian wooden sculpture crafted by experienced artisans. A perfect decorative piece for living spaces and cultural collections.",
+    "exporter_name": "Bali Handicraft Export",
+    "exporter_image": "https://i.ibb.co.com/PXR5PsZ/exporter17.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/4Z083ng5/Spanish-Olive-Oil.jpg",
@@ -141,7 +192,10 @@
     "price": 27.99,
     "originCountry": "Spain",
     "rating": 4.8,
-    "availableQuantity": 940
+    "availableQuantity": 940,
+    "product_description": "High-quality Spanish olive oil with rich aroma and smooth texture. Perfect for cooking, salads, and Mediterranean dishes.",
+    "exporter_name": "Madrid Olive Exports",
+    "exporter_image": "https://i.ibb.co.com/zXhzGv4/exporter18.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/3yHQ1K7p/Australian-Wool-Blanket.jpg",
@@ -149,7 +203,10 @@
     "price": 89.00,
     "originCountry": "Australia",
     "rating": 4.6,
-    "availableQuantity": 360
+    "availableQuantity": 360,
+    "product_description": "Warm and durable Australian wool blanket offering premium comfort and long-lasting quality. Ideal for winter and home décor.",
+    "exporter_name": "Sydney Wool Traders",
+    "exporter_image": "https://i.ibb.co.com/GJkfQwv/exporter19.jpg"
   },
   {
     "productImage": "https://i.ibb.co.com/992qTLWg/Pakistani-Leather-Jacket.jpg",
@@ -157,6 +214,9 @@
     "price": 119.99,
     "originCountry": "Pakistan",
     "rating": 4.5,
-    "availableQuantity": 210
+    "availableQuantity": 210,
+    "product_description": "Stylish Pakistani leather jacket crafted from premium materials. Durable, comfortable, and perfect for casual or winter wear.",
+    "exporter_name": "Karachi Leather House",
+    "exporter_image": "https://i.ibb.co.com/LXS9HrP/exporter20.jpg"
   }
 ]

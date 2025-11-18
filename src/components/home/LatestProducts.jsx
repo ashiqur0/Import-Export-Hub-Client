@@ -1,8 +1,8 @@
 import React from 'react';
 import Products from '../common/Products';
 
-const LatestProducts = ({data}) => {
-    // console.log(data);
+const LatestProducts = ({latestProducts}) => {
+    console.log(latestProducts);
 
     return (
         <div className='my-10'>
@@ -10,7 +10,7 @@ const LatestProducts = ({data}) => {
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                 {
-                    data.map(product => <Products key={product._id} product={product}></Products>)
+                    latestProducts.map(product => <Products key={product._id} product={product}></Products>)
                 }
             </div>
         </div>

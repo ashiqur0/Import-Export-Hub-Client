@@ -18,27 +18,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: Home,
-                loader: () => fetch('http://localhost:5000/latest-products'),
-                hydrateFallbackElement: <Loading></Loading>
-            },
-            {
-                path: '/allProducts',
-                Component: AllProducts,
-                loader: () => fetch('http://localhost:5000/products'),
-                hydrateFallbackElement: <Loading></Loading>
-            },
-            {
-                path: '/myExports',
-                Component: MyExports
-            },
-            {
-                path: '/myImports',
-                Component: MyImports
-            },
-            {
-                path: '/addExports',
-                Component: AddExport
+                Component: Home
             },
             {
                 path: '/signup',
@@ -49,7 +29,31 @@ const router = createBrowserRouter([
                 Component: Login
             },
             {
+                path: '/allProducts',
+                Component: AllProducts,
+            },
+            {
+                path: '/myExports',
+                element: <ProtectedRoute>
+                    <MyExports />
+                </ProtectedRoute>
+            },
+            {
+                path: '/myImports',
+                element: <ProtectedRoute>
+                    <MyImports></MyImports>
+                </ProtectedRoute>
+            },
+            {
+                path: '/addExports',
+                element: <ProtectedRoute>
+                    <AddExport />
+                </ProtectedRoute>
+            },
+            {
                 path: '/products/productsDetails/:id',
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
+                hydrateFallbackElement: <Loading></Loading>,
                 element: <ProtectedRoute>
                     <ProductDetails></ProductDetails>
                 </ProtectedRoute>
