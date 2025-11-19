@@ -70,7 +70,7 @@ const MyImports = () => {
                         <p className='col-span-2'>{product.originCountry}</p>
                         <div onClick={() => handleRemove(product._id)} className='btn btn-outline btn-xs col-span-2'>remove</div>
                         <p className='col-span-2 text-center'>{product.importedQuantity}</p>
-                        <Link to={`/products/productsDetails/${product._id}`} className='btn btn-outline btn-xs col-span-2'>see details</Link>
+                        <Link to={`/products/productsDetails/${product.productId}`} className='btn btn-outline btn-xs col-span-2'>see details</Link>
 
                     </div>)
                 }

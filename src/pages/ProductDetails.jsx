@@ -21,6 +21,7 @@ const ProductDetails = () => {
         const importedQuantity = parseInt(e.target.quantity.value);
 
         const importedProduct = {
+            productId: product._id,
             productImage: product.productImage,
             productName: product.productName,
             price: product.price,
