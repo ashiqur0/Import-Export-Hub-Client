@@ -2,7 +2,7 @@ import React from 'react';
 import Products from '../common/Products';
 
 const LatestProducts = ({latestProducts}) => {
-    console.log(latestProducts);
+    // console.log(latestProducts);
 
     return (
         <div className='my-10'>

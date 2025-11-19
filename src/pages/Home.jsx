@@ -9,7 +9,7 @@ const latestProductsPromise = fetch('http://localhost:5000/latest-products').the
 const Home = () => {
     
     const latestProducts = use(latestProductsPromise);
-    console.log(latestProducts);
+    // console.log(latestProducts);
 
     return (
         <div className=''>

@@ -104,7 +104,7 @@ const ProductDetails = () => {
             {/* <button className="btn">open modal</button> */}
             <dialog ref={importModalRef} id="my_modal_1" className="modal">
                 <div className="modal-box bg-slate-800">
-                    <div className="modal-action">
+                    <div className="">
                         <form method="dialog" onSubmit={handleImport}>
                             <fieldset className='fieldset'>
                                 <label className='label'>Quantity</label>

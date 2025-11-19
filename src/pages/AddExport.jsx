@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import useAxios from '../hooks/useAxios';
 import AuthContext from '../context/AuthContext';
+import Swal from 'sweetalert2';
 
 const AddExport = () => {
 
@@ -33,8 +34,18 @@ const AddExport = () => {
         // console.log(newProduct);
         axios.post('/products', newProduct)
             .then(data => {
-                console.log('after saving to products database', data.data);
+                // console.log('after saving to products database', data.data);
+                if (data.data.insertedId) {
+                    Swal.fire({
+                        position: "center",
+                        icon: "success",
+                        title: "Product Exported Successfully",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
             })
+        e.target.reset();
     }
 
     return (
