@@ -6,11 +6,12 @@ import "swiper/css/navigation";
 import { useRef } from 'react';
 import 'animate.css'
 import '../../App.css'
+import { Link } from 'react-router';
 
 const Banner = ({ data }) => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
-
+    
     return (
         <div className='relative w-full mx-auto my-3 md:my-10'>
             <div className=" animate__animated animate__fadeInRight">
@@ -60,7 +61,7 @@ const Banner = ({ data }) => {
                                     <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                                         <div className="flex flex-col items-center gap-5">
                                             <h2 className='text-white text-[1rem] md:text-4xl font-bold'>{src.productName}</h2>
-                                            <button className='w-40'>See Details</button>
+                                            <Link to={`/products/productsDetails/${src._id}`} className='w-40'><button>See Details</button></Link>
                                         </div>
                                     </div>
                                 </div>

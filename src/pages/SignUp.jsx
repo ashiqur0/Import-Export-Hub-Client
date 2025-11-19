@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import AuthContext from '../context/AuthContext';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
 
@@ -32,7 +33,11 @@ const SignUp = () => {
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(() => {
-                alert('sign in with google');
+                Swal.fire({
+                    title: "Signup!",
+                    text: "Your account has been created successfully.",
+                    icon: "success"
+                });
                 navigate(`${location.state ? location.state : '/'}`);
             })
             .catch((err) => {

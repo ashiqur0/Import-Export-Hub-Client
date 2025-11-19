@@ -65,7 +65,7 @@ const ProductDetails = () => {
 
     return (
         <div className='max-w-7xl md:mx-auto mx-3 my-10'>
-            <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-start gap-5 bg-slate-800 md:p-10 p-3 rounded-xl h-full'>
+            <div className='grid grid-cols-1 md:grid-cols-2 justify-center items-start md:gap-10 gap-5 bg-slate-800 md:p-10 p-3 rounded-xl h-full'>
                 <div className='w-full h-full'>
                     <img src={product.productImage} alt={product.productName} className='rounded-xl md:w-full md:h-100 overflow-hidden' />
                 </div>

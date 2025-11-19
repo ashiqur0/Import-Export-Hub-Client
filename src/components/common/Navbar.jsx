@@ -81,11 +81,11 @@ const Navbar = () => {
                                 <button onClick={handleLogOut}>Logout</button></NavLink>
                             <Link
                                 to='/'
-                                className='w-10 border border-green-500 rounded-full ml-3 cursor-pointer'
+                                className='w-10 rounded-full ml-3 cursor-pointer'
                             >
                                 <img
-                                    className='rounded-full w-8 h-8'
-                                    src={`${user && user?.photoURL}`} title={user.displayName} />
+                                    className='rounded-full w-10 h-10'
+                                    src={`${user && user?.photoURL || "https://img.icons8.com/?size=48&id=13042&format=png"}`} title={user.displayName} />
                             </Link>
                         </>
                             :

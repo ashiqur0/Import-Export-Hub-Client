@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import AuthContext from '../context/AuthContext';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -18,7 +19,12 @@ const Login = () => {
 
         loginWithEmail(email, password)
             .then(() => {
-                console.log('success');
+                // console.log('success');
+                Swal.fire({
+                    title: "Login!",
+                    text: "You logged in successfully.",
+                    icon: "success"
+                });
                 navigate(`${location.state ? location.state : '/'}`);
             })
             .then((error) => {
@@ -29,7 +35,12 @@ const Login = () => {
     const handleSignInWithGoogle = () => {
         googleSignIn()
             .then(() => {
-                console.log('success');
+                // console.log('success');
+                Swal.fire({
+                    title: "Login!",
+                    text: "You logged in successfully.",
+                    icon: "success"
+                });
                 navigate(`${location.state && location.state || '/'}`);
             })
             .catch((err) => {
