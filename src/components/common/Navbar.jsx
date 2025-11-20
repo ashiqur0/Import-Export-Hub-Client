@@ -75,7 +75,6 @@ const Navbar = () => {
                     {
                         user ? <>
                             <NavLink
-                                // onClick={handleLogOut}
                                 to='/' className="rounded-sm font-semibold hover:bg-slate-800 bg-slate-900"
                             >
                                 <button onClick={handleLogOut}>Logout</button></NavLink>
@@ -85,7 +84,7 @@ const Navbar = () => {
                             >
                                 <img
                                     className='rounded-full w-10 h-10'
-                                    src={`${user && user?.photoURL || "https://img.icons8.com/?size=48&id=13042&format=png"}`} title={user.displayName} />
+                                    src={`${user && user?.photoURL }`} title={user.displayName} />
                             </Link>
                         </>
                             :

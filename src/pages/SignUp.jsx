@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const SignUp = () => {
 
-    const { signupWithEmail, googleSignIn } = use(AuthContext);
+    const { signupWithEmail, googleSignIn, updateUser, setUser } = use(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     // console.log(location.state);
@@ -32,17 +32,35 @@ const SignUp = () => {
 
         signupWithEmail(email, password)
             .then(result => {
-                console.log(result);
-                // alert('sign up success');
-                Swal.fire({
-                    title: "SignUp success!",
-                    icon: "success",
-                    draggable: true
-                })
-                navigate(`${location.state ? location.state : '/'}`);
+                const user = result.user;
+
+                updateUser({ displayName: name, photoURL: photo })
+                    .then(() => {
+                        setUser({ ...user, displayName: name, photoURL: photo });
+                        Swal.fire({
+                            title: "SignUp success!",
+                            icon: "success",
+                            draggable: true
+                        });
+                        navigate(`${location.state ? location.state : '/'}`);
+                    })
+                    .catch((error) => {
+                        Swal.fire({
+                            icon: "error",
+                            title: `${error.code}`,
+                            text: `${error.message}`,
+                            footer: '<a href=""></a>'
+                        });
+                        setUser(user);
+                    })
             })
             .catch(error => {
-                console.log(error);
+                Swal.fire({
+                    icon: "error",
+                    title: `${error.code}`,
+                    text: `${error.message}`,
+                    footer: '<a href=""></a>'
+                });
             })
         console.log({ name, email, photo, password });
     }

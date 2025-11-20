@@ -1,6 +1,6 @@
 import React, { use, useEffect, useState } from 'react';
 import app from '../firebase/firebase.config';
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import AuthContext from '../context/AuthContext';
 
 const auth = getAuth(app);
@@ -14,7 +14,6 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true);
     const allProducts = use(productsPromise);
     // console.log(allProducts);
-
 
     const signupWithEmail = (email, password) => {
         setLoading(true);
@@ -44,7 +43,12 @@ const AuthProvider = ({children}) => {
         return () => {
             unsubscribe();
         }
-    }, [])
+    }, []);
+
+    
+    const updateUser = (updatedData) => {
+        return updateProfile(auth.currentUser, updatedData);
+    }
 
     const authData = {
         signupWithEmail,
@@ -52,9 +56,11 @@ const AuthProvider = ({children}) => {
         googleSignIn,
         logOut,
         user,
+        setUser,
         loading,
         setLoading,
-        allProducts
+        allProducts,
+        updateUser
     }
 
     return (
