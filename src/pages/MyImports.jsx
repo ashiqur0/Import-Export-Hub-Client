@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import useAxios from '../hooks/useAxios';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
+import AuthContext from '../context/AuthContext';
 
 const MyImports = () => {
 
+    const { user } = use(AuthContext);
     const axios = useAxios();
     const [importedProduct, setImportedProduct] = useState([]);
 
     useEffect(() => {
-        axios.get('/import')
+        axios.get(`/import/?email=${user.email}`)
             .then(data => {
                 setImportedProduct(data.data);
             })
-    }, [axios]);
+    }, [axios, user]);
 
     const handleRemove = (id) => {
         Swal.fire({

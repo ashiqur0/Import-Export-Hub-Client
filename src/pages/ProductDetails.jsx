@@ -1,4 +1,4 @@
-import React, {useRef, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import AuthContext from '../context/AuthContext';
 import { FaLocationDot } from 'react-icons/fa6';
@@ -7,6 +7,7 @@ import useAxios from '../hooks/useAxios';
 
 const ProductDetails = () => {
 
+    const { user } = use(AuthContext);
     const product = useLoaderData();
     const [quantity, setQuantity] = useState(product.availableQuantity);
     const importModalRef = useRef(null);
@@ -27,15 +28,16 @@ const ProductDetails = () => {
             price: product.price,
             rating: product.rating,
             originCountry: product.originCountry,
-            importedQuantity: importedQuantity
+            importedQuantity: importedQuantity,
+            importer_email: user?.email
         }
 
         const availableQuantity = product.availableQuantity - importedQuantity;
-        
+
         if (availableQuantity >= 0) {
             axios.post('/import', importedProduct)
-            .then((data) => {
-                if (data.data.insertedId) {
+                .then((data) => {
+                    if (data.data.insertedId) {
                         setQuantity(availableQuantity);
 
                         Swal.fire({
