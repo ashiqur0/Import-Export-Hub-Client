@@ -11,7 +11,9 @@ const Navbar = () => {
     const { user, logOut } = use(AuthContext);
 
     const links = <>
-        <NavLink to='/' onClick={() => setOpen(!open)}>Home</NavLink>
+        {
+            !user && <NavLink to='/' onClick={() => setOpen(!open)}>Home</NavLink>
+        }
         <NavLink to='/allProducts' onClick={() => setOpen(!open)}>AllProducts</NavLink>
         {
             user && <>
@@ -84,7 +86,7 @@ const Navbar = () => {
                             >
                                 <img
                                     className='rounded-full w-10 h-10'
-                                    src={`${user && user?.photoURL }`} title={user.displayName} />
+                                    src={`${user && user?.photoURL}`} title={user.displayName} />
                             </Link>
                         </>
                             :
