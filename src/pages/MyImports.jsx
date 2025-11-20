@@ -80,7 +80,7 @@ const MyImports = () => {
                     }
                 </div>
 
-                <div>
+                <div className='md:hidden'>
                     {
                         importedProduct.map(product => <div key={product._id} className='bg-slate-800 px-4 py-5 rounded-xl mb-4'>
                             <img src={product.productImage} alt={product.productName} className='w-full rounded-xl h-50 overflow-hidden' />
