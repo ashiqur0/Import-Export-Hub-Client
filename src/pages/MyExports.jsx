@@ -100,7 +100,7 @@ const MyExports = () => {
             <h1 className='text-2xl font-semibold py-5'>My Exported Product({exportedProduct.length})</h1>
 
             <div className=''>
-                <div className='grid grid-cols-16 gap-5 text-xl font-semibold mt-5'>
+                <div className='md:grid grid-cols-16 gap-5 text-xl font-semibold mt-5 hidden'>
                     <p className='w-20 h-15 col-span-2 ml-3'>Image</p>
                     <p className='col-span-2'>Name</p>
                     <p className='col-span-2'>Price</p>
@@ -110,19 +110,59 @@ const MyExports = () => {
                     <p className='col-span-2 text-center'>Quantity</p>
                     <div className='col-span-2 ml-13'>Details</div>
                 </div>
-                {
-                    exportedProduct.map(product => <div key={product._id} className='mb-3 grid grid-cols-16 justify-between items-center hover:border border-slate-800 p-2 rounded-xl'>
-                        <img src={product.productImage} alt={product.productName} className='w-20 h-15 col-span-2 rounded-sm' />
-                        <p className='col-span-2'>{product.productName}</p>
-                        <p className='col-span-2'>{product.price}</p>
-                        <p className='col-span-2'>{product.rating}</p>
-                        <p className='col-span-2'>{product.originCountry}</p>
-                        <p onClick={() => handleDelete(product._id)} className='btn btn-outline btn-xs col-span-2 w-2/3 hover:bg-slate-900'>delete</p>
-                        <p className='col-span-2 text-center'>{product.availableQuantity}</p>
-                        <p onClick={() => handleUpdateExportModalOpen(product._id)} className='btn btn-outline btn-xs col-span-2 w-2/3 ml-13 hover:bg-slate-900'>update</p>
-                    </div>)
-                }
+
+                <div className='md:flex hidden flex-col'>
+                    {
+                        exportedProduct.map(product => <div key={product._id} className='mb-3 grid grid-cols-16 justify-between items-center hover:border border-slate-800 p-2 rounded-xl'>
+                            <img src={product.productImage} alt={product.productName} className='w-20 h-15 col-span-2 rounded-sm' />
+                            <p className='col-span-2'>{product.productName}</p>
+                            <p className='col-span-2'>{product.price}</p>
+                            <p className='col-span-2'>{product.rating}</p>
+                            <p className='col-span-2'>{product.originCountry}</p>
+                            <p onClick={() => handleDelete(product._id)} className='btn btn-outline btn-xs col-span-2 w-2/3 hover:bg-slate-900'>delete</p>
+                            <p className='col-span-2 text-center'>{product.availableQuantity}</p>
+                            <p onClick={() => handleUpdateExportModalOpen(product._id)} className='btn btn-outline btn-xs col-span-2 w-2/3 ml-13 hover:bg-slate-900'>update</p>
+                        </div>)
+                    }
+                </div>
+
+                <div>
+                    {
+                        exportedProduct.map(product => <div key={product._id} className='bg-slate-800 px-4 py-5 rounded-xl mb-4'>
+                            <img src={product.productImage} alt={product.productName} className='w-full rounded-xl h-50 overflow-hidden' />
+                            <div className='flex items-center my-3'>
+                                <div className='flex flex-col font-bold'>
+                                    <p className=''>Name</p>
+                                    <p className=''>Price</p>
+                                    <p className=''>Rating</p>
+                                    <p className=''>Origin</p>
+                                    <p className=''>Quantity</p>
+                                </div>
+                                <div className='flex flex-col ml-2'>
+                                    <p className=''>:</p>
+                                    <p className=''>:</p>
+                                    <p className=''>:</p>
+                                    <p className=''>:</p>
+                                    <p className=''>:</p>
+                                </div>
+                                <div className='flex flex-col ml-3'>
+                                    <p className=''>{product.productName}</p>
+                                    <p className=''>{product.price}</p>
+                                    <p className=''>{product.rating}</p>
+                                    <p className=''>{product.originCountry}</p>
+                                    <p className=''>{product.availableQuantity}</p>
+                                </div>                                
+                            </div>
+
+                            <div className='grid grid-cols-2 items-center gap-5 '>
+                                <p onClick={() => handleDelete(product._id)} className='btn btn-outline btn-xs hover:bg-slate-900 text-[1rem] font-medium py-3'>Delete</p>
+                                <p onClick={() => handleUpdateExportModalOpen(product._id)} className='btn btn-outline btn-xs hover:bg-slate-900 text-[1rem] font-medium py-3'>Update</p>
+                            </div>
+                        </div>)
+                    }
+                </div>
             </div>
+
             {/* modal to update exported product */}
             <dialog ref={updateExportModalRef} id="my_modal_1" className="modal">
                 <div className="modal-box bg-slate-800">
