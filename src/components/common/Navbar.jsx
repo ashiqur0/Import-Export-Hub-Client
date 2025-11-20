@@ -11,13 +11,13 @@ const Navbar = () => {
     const { user, logOut } = use(AuthContext);
 
     const links = <>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/allProducts'>AllProducts</NavLink>
+        <NavLink to='/' onClick={() => setOpen(!open)}>Home</NavLink>
+        <NavLink to='/allProducts' onClick={() => setOpen(!open)}>AllProducts</NavLink>
         {
             user && <>
-                <NavLink to='/myExports'>MyExports</NavLink>
-                <NavLink to='/myImports'>MyImports</NavLink>
-                <NavLink to='/addExports'>AddExport</NavLink>
+                <NavLink to='/myExports' onClick={() => setOpen(!open)}>MyExports</NavLink>
+                <NavLink to='/myImports' onClick={() => setOpen(!open)}>MyImports</NavLink>
+                <NavLink to='/addExports' onClick={() => setOpen(!open)}>AddExport</NavLink>
             </>
         }
     </>
@@ -54,12 +54,12 @@ const Navbar = () => {
                         `}>{links}
                         {
                             user ? <>
-                                <Link to='/'><button onClick={handleLogOut}>Logout</button></Link>
+                                <Link to='/' onClick={() => setOpen(!open)}><button onClick={handleLogOut}>Logout</button></Link>
                             </>
                                 :
                                 <>
-                                    <NavLink to='/signup'>Signup</NavLink>
-                                    <NavLink to='/login'>Login</NavLink>
+                                    <NavLink to='/signup' onClick={() => setOpen(!open)}>Signup</NavLink>
+                                    <NavLink to='/login' onClick={() => setOpen(!open)}>Login</NavLink>
                                 </>
                         }
                     </ul>
