@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import AuthContext from '../context/AuthContext';
 import Swal from 'sweetalert2';
@@ -8,7 +8,8 @@ const SignUp = () => {
     const { signupWithEmail, googleSignIn } = use(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location.state);
+    // console.log(location.state);
+    const [passwordError, setPasswordError] = useState('');
 
     const handleSignup = (e) => {
         e.preventDefault();
@@ -18,10 +19,26 @@ const SignUp = () => {
         const photo = e.target.photo.value;
         const password = e.target.password.value;
 
+        const passwordFormat = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+        if (!passwordFormat.test(password)) {
+            Swal.fire({
+                icon: "error",
+                title: "Password Not Strong Enough",
+                text: "Password should contain Uppercase, Lowercase and atleast 6 character",
+                footer: '<a href=""></a>'
+            });
+            return setPasswordError('Password should contain Uppercase, Lowercase and atleast 6 character');
+        }
+
         signupWithEmail(email, password)
             .then(result => {
                 console.log(result);
-                alert('sign up success');
+                // alert('sign up success');
+                Swal.fire({
+                    title: "SignUp success!",
+                    icon: "success",
+                    draggable: true
+                })
                 navigate(`${location.state ? location.state : '/'}`);
             })
             .catch(error => {
@@ -89,6 +106,7 @@ const SignUp = () => {
                             required
                         />
 
+                        <p className='text-red-500'>{passwordError}</p>
                         <button type='submit' className="btn btn-neutral mt-4">Sign up</button>
 
                         {/* Google */}
