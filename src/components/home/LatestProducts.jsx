@@ -10,7 +10,7 @@ const LatestProducts = () => {
     const [latestProducts, setLatestProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/latest-products')
+        axios.get('https://import-export-hub-api-server-by-ash.vercel.app/latest-products')
             .then(data => setLatestProducts(data.data))
     }, [axios])
 

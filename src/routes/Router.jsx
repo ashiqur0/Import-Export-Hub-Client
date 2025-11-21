@@ -53,7 +53,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/products/productsDetails/:id',
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`),
+                loader: ({ params }) => fetch(`https://import-export-hub-api-server-by-ash.vercel.app/products/${params.id}`),
                 hydrateFallbackElement: <Loading></Loading>,
                 element: <ProtectedRoute>
                     <ProductDetails></ProductDetails>

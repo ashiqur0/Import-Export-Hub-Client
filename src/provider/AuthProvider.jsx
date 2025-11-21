@@ -15,7 +15,7 @@ const AuthProvider = ({ children }) => {
     const [allProducts, setAllProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/allproducts')
+        axios.get('https://import-export-hub-api-server-by-ash.vercel.app/allproducts')
             .then(data => setAllProducts(data.data));
     }, [axios])
 

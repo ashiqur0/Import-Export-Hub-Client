@@ -4,7 +4,7 @@ import useAuth from './useAuth';
 import { useNavigate } from 'react-router';
 
 const instance = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://import-export-hub-api-server-by-ash.vercel.app'
 });
 
 const useAxiosSecure = () => {
