@@ -1,14 +1,13 @@
 import React, { use } from 'react';
-import useAxios from '../hooks/useAxios';
+// import useAxios from '../hooks/useAxios';
 import AuthContext from '../context/AuthContext';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const AddExport = () => {
 
     const { user } = use(AuthContext);
-    // console.log(user.email);
-
-    const axios = useAxios();
+    const axiosSecure = useAxiosSecure();
 
     const handleAddExport = (e) => {
         e.preventDefault();
@@ -19,8 +18,7 @@ const AddExport = () => {
         const country = e.target.origin_country.value;
         const rating = e.target.rating.value;
         const quantity = e.target.available_quantity.value;
-        const exporter_name = user.name;
-        const exporter_email = user.email;
+
         const newProduct = {
             productName: name,
             productImage: image,
@@ -28,13 +26,13 @@ const AddExport = () => {
             originCountry: country,
             rating: rating,
             availableQuantity: quantity,
-            exporter_name: exporter_name,
-            exporter_email: exporter_email
+            exporter_name: user.name,
+            exporter_email: user.email
         };
-        // console.log(newProduct);
-        axios.post('/products', newProduct)
+        
+        // create a new product || only logged in user can create a new product
+        axiosSecure.post(`/products/?email=${user.email}`, newProduct)
             .then(data => {
-                // console.log('after saving to products database', data.data);
                 if (data.data.insertedId) {
                     Swal.fire({
                         position: "center",

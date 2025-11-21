@@ -1,21 +1,21 @@
 import React, { use, useEffect, useState } from 'react';
-import useAxios from '../hooks/useAxios';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 import AuthContext from '../context/AuthContext';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const MyImports = () => {
 
     const { user } = use(AuthContext);
-    const axios = useAxios();
+    const axiosSecure = useAxiosSecure();
     const [importedProduct, setImportedProduct] = useState([]);
 
     useEffect(() => {
-        axios.get(`/import/?email=${user.email}`)
+        axiosSecure.get(`/import/?email=${user.email}`)
             .then(data => {
                 setImportedProduct(data.data);
             })
-    }, [axios, user]);
+    }, [axiosSecure, user]);
 
     const handleRemove = (id) => {
         Swal.fire({
@@ -28,10 +28,8 @@ const MyImports = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-
-                axios.delete(`/import/${id}`)
+                axiosSecure.delete(`/import/${id}?email=${user.email}`)
                     .then(data => {
-                        // console.log('after delete', data);
                         if (data.data.deletedCount) {
                             Swal.fire({
                                 title: "Deleted!",

@@ -3,15 +3,16 @@ import { useLoaderData } from 'react-router';
 import AuthContext from '../context/AuthContext';
 import { FaLocationDot } from 'react-icons/fa6';
 import Swal from 'sweetalert2'
-import useAxios from '../hooks/useAxios';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const ProductDetails = () => {
 
-    const { user } = use(AuthContext);
     const product = useLoaderData();
+
+    const { user } = use(AuthContext);
     const [quantity, setQuantity] = useState(product.availableQuantity);
     const importModalRef = useRef(null);
-    const axios = useAxios();
+    const axiosSecure = useAxiosSecure();
 
     const handleImportModalOpen = () => {
         importModalRef.current.showModal();
@@ -35,7 +36,7 @@ const ProductDetails = () => {
         const availableQuantity = product.availableQuantity - importedQuantity;
 
         if (availableQuantity >= 0) {
-            axios.post('/import', importedProduct)
+            axiosSecure.post(`/import/?email=${user.email}`, importedProduct)
                 .then((data) => {
                     if (data.data.insertedId) {
                         setQuantity(availableQuantity);
@@ -50,7 +51,7 @@ const ProductDetails = () => {
                     }
                 })
 
-            axios.patch(`/products/${product._id}`, { availableQuantity })
+            axiosSecure.patch(`/products/${product._id}?email=${user.email}`, { availableQuantity })
                 .then(data => {
                     console.log('updated product', data.data);
                 })

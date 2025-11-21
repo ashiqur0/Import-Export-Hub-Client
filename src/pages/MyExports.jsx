@@ -1,12 +1,12 @@
 import React, { use, useEffect, useState } from 'react';
-import useAxios from '../hooks/useAxios';
 import AuthContext from '../context/AuthContext';
 import Swal from 'sweetalert2';
 import { useRef } from 'react';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const MyExports = () => {
 
-    const axios = useAxios();
+    const axiosSecure = useAxiosSecure();
     const { user } = use(AuthContext);
     const updateExportModalRef = useRef(null);
     const [exportedProduct, setExportedProduct] = useState([]);//map hocche
@@ -20,12 +20,12 @@ const MyExports = () => {
     const [productAvailableQuantity, updateProductAvailableQuantity] = useState();
 
     useEffect(() => {
-        axios.get(`/products/?email=${user.email}`)
+        // get exported product list
+        axiosSecure.get(`/products/?email=${user.email}`)
             .then(data => {
-                // console.log('after getting exported product data', data.data);
                 setExportedProduct(data.data);
             })
-    }, [axios, user]);
+    }, [axiosSecure, user]);
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -39,9 +39,8 @@ const MyExports = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                axios.delete(`/products/${id}`)
+                axiosSecure.delete(`/products/${id}?email=${user.email}`)
                     .then(data => {
-                        // console.log('after delete', data.data);
                         if (data.data.deletedCount) {
                             Swal.fire({
                                 title: "Deleted!",
@@ -76,7 +75,8 @@ const MyExports = () => {
         const exporter_email = user.email;
         const update = { productName, productPhoto, productPrice, productOrigin, productRating, productAvailableQuantity, exporter_email };
 
-        axios.put(`/products/${id}`, update)
+        // updating product information
+        axiosSecure.put(`/products/${id}?email=${user.email}`, update)
             .then(data => {
                 if (data.data.modifiedCount) {
                     Swal.fire({
@@ -86,9 +86,8 @@ const MyExports = () => {
                     });
 
                     // update the state with updated product details
-                    axios.get(`/products/?email=${user.email}`)
+                    axiosSecure.get(`/products/?email=${user.email}`)
                         .then(data => {
-                            // console.log('after getting exported product data', data.data);
                             setExportedProduct(data.data);
                         })
                 }

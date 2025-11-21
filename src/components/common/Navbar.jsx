@@ -17,8 +17,8 @@ const Navbar = () => {
         <NavLink to='/allProducts' onClick={() => setOpen(!open)}>AllProducts</NavLink>
         {
             user && <>
-                <NavLink to='/myExports' onClick={() => setOpen(!open)}>MyExports</NavLink>
                 <NavLink to='/myImports' onClick={() => setOpen(!open)}>MyImports</NavLink>
+                <NavLink to='/myExports' onClick={() => setOpen(!open)}>MyExports</NavLink>
                 <NavLink to='/addExports' onClick={() => setOpen(!open)}>AddExport</NavLink>
             </>
         }
