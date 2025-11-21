@@ -1,19 +1,23 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import app from '../firebase/firebase.config';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import AuthContext from '../context/AuthContext';
+import useAxios from '../hooks/useAxios';
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
-const productsPromise = fetch(`http://localhost:5000/products`).then(res => res.json());
-// console.log(productsPromise);
 
-const AuthProvider = ({children}) => {
-    
+const AuthProvider = ({ children }) => {
+
+    const axios = useAxios();
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const allProducts = use(productsPromise);
-    // console.log(allProducts);
+    const [allProducts, setAllProducts] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/products')
+            .then(data => setAllProducts(data.data));
+    }, [axios])
 
     const signupWithEmail = (email, password) => {
         setLoading(true);
@@ -45,7 +49,7 @@ const AuthProvider = ({children}) => {
         }
     }, []);
 
-    
+
     const updateUser = (updatedData) => {
         return updateProfile(auth.currentUser, updatedData);
     }

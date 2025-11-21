@@ -1,8 +1,18 @@
 import React from 'react';
 import Products from '../common/Products';
+import useAxios from '../../hooks/useAxios';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
-const LatestProducts = ({latestProducts}) => {
-    // console.log(latestProducts);
+const LatestProducts = () => {
+
+    const axios = useAxios();
+    const [latestProducts, setLatestProducts] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/latest-products')
+            .then(data => setLatestProducts(data.data))
+    }, [axios])
 
     return (
         <div className='my-10'>

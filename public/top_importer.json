@@ -1,0 +1,72 @@
+[
+    {
+        "company_name": "Walmart",
+        "country": "United States",
+        "company_logo": "https://i.ibb.co.com/DPKkm9mt/walmart.jpg",
+        "imported_value_per_year": "$300B",
+        "global_market_share": "16%"
+    },
+    {
+        "company_name": "Amazon Global Sourcing",
+        "country": "United States",
+        "company_logo": "https://i.ibb.co.com/cK69N9Xt/amazon.jpg",
+        "imported_value_per_year": "$210B",
+        "global_market_share": "11%"
+    },
+    {
+        "company_name": "Alibaba Group",
+        "country": "China",
+        "company_logo": "https://i.ibb.co.com/3YN3c053/alibaba.jpg",
+        "imported_value_per_year": "$185B",
+        "global_market_share": "9%"
+    },
+    {
+        "company_name": "Costco Wholesale",
+        "country": "United States",
+        "company_logo": "https://i.ibb.co.com/sJWW6nCV/castco.jpg",
+        "imported_value_per_year": "$165B",
+        "global_market_share": "8%"
+    },
+    {
+        "company_name": "Schwarz Group (Lidl & Kaufland)",
+        "country": "Germany",
+        "company_logo": "https://i.ibb.co.com/xqdcCFsh/schwarz.jpg",
+        "imported_value_per_year": "$140B",
+        "global_market_share": "7%"
+    },
+    {
+        "company_name": "Ahold Delhaize",
+        "country": "Netherlands",
+        "company_logo": "https://i.ibb.co.com/F4nBsC75/ahold-delhoize.jpg",
+        "imported_value_per_year": "$95B",
+        "global_market_share": "5%"
+    },
+    {
+        "company_name": "Carrefour Group",
+        "country": "France",
+        "company_logo": "https://i.ibb.co.com/LzbbsxB0/carrefour.jpg",
+        "imported_value_per_year": "$90B",
+        "global_market_share": "4.8%"
+    },
+    {
+        "company_name": "Tesco PLC",
+        "country": "United Kingdom",
+        "company_logo": "https://i.ibb.co.com/q3sDVvh5/tesco.jpg",
+        "imported_value_per_year": "$82B",
+        "global_market_share": "4.3%"
+    },
+    {
+        "company_name": "Rakuten Global Trading",
+        "country": "Japan",
+        "company_logo": "https://i.ibb.co.com/NcdQZMz/rakuten.jpg",
+        "imported_value_per_year": "$63B",
+        "global_market_share": "3%"
+    },
+    {
+        "company_name": "Woolworths Group",
+        "country": "Australia",
+        "company_logo": "https://i.ibb.co.com/yFhCF1dr/woolworths-group.jpg",
+        "imported_value_per_year": "$55B",
+        "global_market_share": "2.6%"
+    }
+]

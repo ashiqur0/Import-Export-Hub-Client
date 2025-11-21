@@ -1,0 +1,72 @@
+[
+    {
+        "company_name": "Samsung Electronics",
+        "country": "South Korea",
+        "company_logo": "https://i.ibb.co.com/jPhvkR8J/samsung.jpg",
+        "exported_value_per_year": "$245B",
+        "global_market_share": "14%"
+    },
+    {
+        "company_name": "Toyota Motor Corporation",
+        "country": "Japan",
+        "company_logo": "https://i.ibb.co.com/dwDNB3J0/toyota.jpg",
+        "exported_value_per_year": "$210B",
+        "global_market_share": "12%"
+    },
+    {
+        "company_name": "Apple Inc.",
+        "country": "United States",
+        "company_logo": "https://i.ibb.co.com/PzMgSS2y/apple.jpg",
+        "exported_value_per_year": "$190B",
+        "global_market_share": "10%"
+    },
+    {
+        "company_name": "Volkswagen Group",
+        "country": "Germany",
+        "company_logo": "https://i.ibb.co.com/cc98mMxg/Volkswagen.jpg",
+        "exported_value_per_year": "$178B",
+        "global_market_share": "9%"
+    },
+    {
+        "company_name": "Foxconn (Hon Hai Precision Industry)",
+        "country": "Taiwan",
+        "company_logo": "https://i.ibb.co.com/W4csVNdZ/foxconn.jpg",
+        "exported_value_per_year": "$165B",
+        "global_market_share": "8%"
+    },
+    {
+        "company_name": "China National Petroleum Corporation (CNPC)",
+        "country": "China",
+        "company_logo": "https://i.ibb.co.com/0RckCkXJ/cnpc.jpg",
+        "exported_value_per_year": "$140B",
+        "global_market_share": "7%"
+    },
+    {
+        "company_name": "Nestlé Global",
+        "country": "Switzerland",
+        "company_logo": "https://i.ibb.co.com/2mQPbZY/nestle.jpg",
+        "exported_value_per_year": "$112B",
+        "global_market_share": "5.5%"
+    },
+    {
+        "company_name": "Siemens AG",
+        "country": "Germany",
+        "company_logo": "https://i.ibb.co.com/ch7D77yn/siemens.jpg",
+        "exported_value_per_year": "$95B",
+        "global_market_share": "4.8%"
+    },
+    {
+        "company_name": "Mitsubishi Corporation",
+        "country": "Japan",
+        "company_logo": "https://i.ibb.co.com/d4MXPffB/mitsubishi.jpg",
+        "exported_value_per_year": "$88B",
+        "global_market_share": "4.2%"
+    },
+    {
+        "company_name": "Procter & Gamble (P&G)",
+        "country": "United States",
+        "company_logo": "https://i.ibb.co.com/Fbc898YW/pg.jpg",
+        "exported_value_per_year": "$70B",
+        "global_market_share": "3%"
+    }
+]
