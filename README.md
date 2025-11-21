@@ -70,7 +70,7 @@ VITE_FIREBASE_APP_ID=your_app_id
 npm run dev
 ```
 
-The application will be available at `https://import-export-hub-api-server-by-ash.vercel.app`
+The application will be available at `http://localhost:5000`
 
 ## 📦 Available Scripts
 
