@@ -3,9 +3,9 @@ import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const Products = ({ product }) => {
-    // const {user} = use(AuthContext);
+    
     const { _id, productImage, productName, price, originCountry, rating, availableQuantity } = product;
-    // console.log(product);
+    
 
     return (
         <div className="card w-full shadow-md p-4 flex flex-col justify-between bg-slate-800 border border-slate-700 hover:-mt-1 hover:mb-1 hover:shadow-slate-700 hover:border-slate-500">
@@ -27,7 +27,7 @@ const Products = ({ product }) => {
                         <p>{rating}</p>
                     </div>
                 </div>
-                {/* to={`${user? `/auth/productDetails/${_id}`:'/auth/login'}`} */}
+                
                 <Link to={`/products/productsDetails/${_id}`} className="card-actions ">
                     <button className='btn btn-primary w-full'>See Details</button>
                 </Link>

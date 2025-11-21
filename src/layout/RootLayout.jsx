@@ -9,6 +9,7 @@ const RootLayout = () => {
         
         <div className='bg-slate-900'>
             <Navbar />
+            
             <div className='min-h-screen'>
                 <Outlet />
             </div>            

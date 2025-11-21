@@ -15,11 +15,9 @@ const Login = () => {
 
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log({ email, password });
 
         loginWithEmail(email, password)
             .then(() => {
-                // console.log('success');
                 Swal.fire({
                     title: "Login!",
                     text: "You logged in successfully.",
@@ -35,7 +33,6 @@ const Login = () => {
     const handleSignInWithGoogle = () => {
         googleSignIn()
             .then(() => {
-                // console.log('success');
                 Swal.fire({
                     title: "Login!",
                     text: "You logged in successfully.",

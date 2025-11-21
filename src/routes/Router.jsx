@@ -10,6 +10,7 @@ import Login from "../pages/Login";
 import Loading from "../components/common/Loading";
 import ProductDetails from "../pages/ProductDetails";
 import ProtectedRoute from "./ProtectedRoute";
+import PageNotFound from "../pages/PageNotFound";
 
 const router = createBrowserRouter([
     {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
                 </ProtectedRoute>
             }
         ]
+    },
+    {
+        path: '/*',
+        Component: PageNotFound
     }
 ]);
 

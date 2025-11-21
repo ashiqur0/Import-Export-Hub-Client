@@ -1,5 +1,4 @@
 import React, { use } from 'react';
-// import useAxios from '../hooks/useAxios';
 import AuthContext from '../context/AuthContext';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../hooks/useAxiosSecure';

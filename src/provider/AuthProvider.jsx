@@ -3,18 +3,15 @@ import app from '../firebase/firebase.config';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import AuthContext from '../context/AuthContext';
 import useAxios from '../hooks/useAxios';
-// import { use } from 'react';
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
-// const allProductsPromise = fetch('http://localhost:5000/products').then(res => res.json());
 const AuthProvider = ({ children }) => {
 
     const axios = useAxios();
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    // const allProducts = use(allProductsPromise);
     const [allProducts, setAllProducts] = useState([]);
 
     useEffect(() => {

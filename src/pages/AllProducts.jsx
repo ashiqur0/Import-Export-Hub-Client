@@ -1,12 +1,8 @@
 import React, { use } from 'react';
 import Products from '../components/common/Products';
 import AuthContext from '../context/AuthContext';
-// import { useLoaderData } from 'react-router';
-
 const AllProducts = () => {
     const { allProducts } = use(AuthContext);
-        // const prod = useLoaderData();
-    // console.log(data);
 
     return (
         <div className='max-w-7xl mx-2 md:mx-auto my-10'>

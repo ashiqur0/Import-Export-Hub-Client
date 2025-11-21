@@ -3,25 +3,17 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useRef } from 'react';
+import { use, useRef } from 'react';
 import 'animate.css'
 import '../../App.css'
 import { Link } from 'react-router';
-import { useEffect } from 'react';
-import useAxios from '../../hooks/useAxios';
-import { useState } from 'react';
+import AuthContext from '../../context/AuthContext';
 
 const Banner = () => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     
-    const axios = useAxios();
-    const [latestProducts, setLatestProducts] = useState([]);
-    
-    useEffect(() => {
-        axios.get('http://localhost:5000/latest-products')
-        .then(data => setLatestProducts(data.data))
-    }, [axios])
+    const {allProducts: products} = use(AuthContext);
     
     return (
         <div className='relative w-full mx-auto my-3 md:my-10'>
@@ -60,7 +52,7 @@ const Banner = () => {
                     }}
                 >
                     {
-                        latestProducts.map((src) => (
+                        products.map((src) => (
                             <SwiperSlide key={src._id}>
                                 <div className="md:h-100 h-50 flex items-center justify-center bg-gray-100  overflow-hidden">
                                     <img
