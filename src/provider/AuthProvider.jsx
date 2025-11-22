@@ -49,7 +49,6 @@ const AuthProvider = ({ children }) => {
         }
     }, []);
 
-
     const updateUser = (updatedData) => {
         return updateProfile(auth.currentUser, updatedData);
     }

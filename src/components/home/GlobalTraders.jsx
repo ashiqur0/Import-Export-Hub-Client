@@ -12,7 +12,7 @@ const GlobalTraders = () => {
     const importers = use(top_importerPromise);
 
     return (
-        <div className='my-10 md:mx-auto mx-0'>
+        <div className='my-10'>
             <h1 className='md:text-3xl ml-4 text-xl font-medium mt-10'>🌍 Global Traders</h1>
 
             <div className='bg-stone-800 mt-5'>

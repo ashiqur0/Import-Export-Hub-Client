@@ -16,8 +16,9 @@ const Banner = () => {
     const {allProducts: products} = use(AuthContext);
     
     return (
-        <div className='relative w-full mx-auto my-3 md:my-10'>
-            <div className=" animate__animated animate__fadeInRight">
+        <div className=' w-full mx-auto my-3 md:my-10'> 
+        {/* relative */}
+            <div className="animate__animated animate__fadeInRight">
                 {/* Custom Left & Right Buttons */}
                 <div
                     ref={nextRef}

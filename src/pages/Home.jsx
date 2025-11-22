@@ -7,10 +7,10 @@ import TopExportsCategory from '../components/home/TopExportsCategory';
 const Home = () => {
 
     return (
-        <div className=''>
+        <div className='w-full'>
             <Banner></Banner>
 
-            <div className='max-w-7xl md:mx-auto mx-2'>
+            <div className='md:max-w-7xl md:mx-auto mx-2'>
                 <LatestProducts />
                 <TopExportsCategory />
             </div>
