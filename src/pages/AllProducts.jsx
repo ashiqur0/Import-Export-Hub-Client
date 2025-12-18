@@ -6,6 +6,7 @@ const AllProducts = () => {
 
     return (
         <div className='max-w-7xl mx-2 md:mx-auto my-10'>
+            <title>Import-Export All Products</title>
             <h1 className='md:text-3xl text-2xl font-semibold mb-5'>All Products page({allProducts.length})</h1>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
