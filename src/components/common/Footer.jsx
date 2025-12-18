@@ -2,14 +2,18 @@ import React from 'react';
 import { Link, NavLink } from 'react-router';
 import { FaFacebook, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import useAuth from '../../hooks/useAuth';
 
 const Footer = () => {
+
+    const { toggle } = useAuth();
+
     return (
-        <footer className='p-10 bg-slate-900'>
+        <footer className={`p-10 ${toggle && 'bg-slate-900'}`}>
             <div className='grid md:grid-cols-30 justify-between gap-6 mb-10'>
                 <div className='col-span-9 '>
                     <h1 className='text-xl font-semibold mb-1'>Company Info</h1>
-                    <p className=''>Import Export Hub is a modern online platform that connects global exporters and importers. Manage your exports, explore international products, and import what you love — all from one 
+                    <p className=''>Import Export Hub is a modern online platform that connects global exporters and importers. Manage your exports, explore international products, and import what you love — all from one
                         dashboard.</p>
                 </div>
 
