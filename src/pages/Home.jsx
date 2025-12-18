@@ -8,6 +8,7 @@ const Home = () => {
 
     return (
         <div className='w-full'>
+            <title>Import-Export Home</title>
             <Banner></Banner>
 
             <div className='md:max-w-7xl md:mx-auto mx-2'>
