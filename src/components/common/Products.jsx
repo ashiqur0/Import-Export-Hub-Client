@@ -9,7 +9,7 @@ const Products = ({ product }) => {
     const { toggle } = useAuth();
 
     return (
-        <div className={`card w-full shadow-md p-4 flex flex-col justify-between hover:-mt-1 hover:mb-1 ${toggle && 'hover:shadow-slate-700 bg-slate-800'} bg-stone-200 hover:bg-stone-100 border border-slate-700 hover:border-slate-500`}>
+        <div className={`card w-full shadow-md p-4 flex flex-col justify-between hover:-mt-1 hover:mb-1 ${toggle? 'hover:shadow-slate-700 bg-slate-800' : 'bg-stone-200 hover:bg-stone-100'} border border-slate-700 hover:border-slate-500`}>
             <figure className="">
                 <img
                     src={productImage}
