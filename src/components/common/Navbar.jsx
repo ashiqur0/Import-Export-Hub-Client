@@ -6,10 +6,12 @@ import { Link, NavLink } from 'react-router';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 import AuthContext from '../../context/AuthContext';
 import DarkLightThemeToggle from '../DarkLightThemeToggle';
+import useAuth from '../../hooks/useAuth';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
     const { user, logOut } = use(AuthContext);
+    const { toggle } = useAuth();
 
     const links = <>
         {
@@ -36,7 +38,7 @@ const Navbar = () => {
     }
 
     return (
-        <section className='p-4 shadow-md shadow-slate-900 bg-slate-900 '>
+        <section className={`p-4 ${toggle && 'shadow-slate-900 shadow-md bg-slate-900'}`}>
             <nav className='md:flex justify-between items-center max-w-7xl mx-auto'>
                 <div className='flex justify-between items-center cursor-pointer'>
 
