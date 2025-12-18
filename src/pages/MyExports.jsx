@@ -96,6 +96,7 @@ const MyExports = () => {
 
     return (
         <div className='md:max-w-7xl md:mx-auto mx-3'>
+            <title>My Imports</title>
             <h1 className='text-2xl font-semibold py-5'>My Exported Product({exportedProduct.length})</h1>
 
             <div className=''>
