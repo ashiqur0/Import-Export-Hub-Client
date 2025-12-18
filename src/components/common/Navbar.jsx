@@ -5,6 +5,7 @@ import { CiMenuFries } from 'react-icons/ci';
 import { Link, NavLink } from 'react-router';
 import { Bounce, toast, ToastContainer } from 'react-toastify';
 import AuthContext from '../../context/AuthContext';
+import DarkLightThemeToggle from '../DarkLightThemeToggle';
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -74,6 +75,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='md:flex hidden gap-3'>
+                    <DarkLightThemeToggle />
                     {
                         user ? <>
                             <NavLink
