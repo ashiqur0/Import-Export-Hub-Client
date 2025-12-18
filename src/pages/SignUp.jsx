@@ -82,6 +82,7 @@ const SignUp = () => {
 
     return (
         <div className='flex justify-center items-center min-h-screen'>
+            <title>Import-Export Sign up</title>
             <div className="card bg-slate-800 w-full max-w-sm shrink-0 shadow-2xl border border-slate-700">
                 <h2 className='text-center text-3xl font-semibold mt-6 '>Sign up here</h2>
                 <form onSubmit={handleSignup}
