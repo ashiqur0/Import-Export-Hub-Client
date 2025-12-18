@@ -2,13 +2,14 @@ import React, { use } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import AuthContext from '../context/AuthContext';
 import Swal from 'sweetalert2';
+import useAuth from '../hooks/useAuth';
 
 const Login = () => {
 
     const { googleSignIn, loginWithEmail } = use(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location.state);
+    const { toggle } = useAuth();
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -48,7 +49,7 @@ const Login = () => {
     return (
         <div className='flex justify-center items-center min-h-screen'>
             <title>Import-Export Login</title>
-            <div className="card bg-slate-800 w-full max-w-sm shrink-0 shadow-2xl border border-slate-700">
+            <div className={`card ${toggle && 'bg-slate-800'} w-full max-w-sm shrink-0 shadow-2xl border border-slate-700`}>
                 <h2 className='text-center text-3xl font-semibold mt-6 '>Login you account</h2>
                 <form onSubmit={handleLogin}
                     className="card-body">
@@ -57,7 +58,7 @@ const Login = () => {
                         <label className="label">Email</label>
                         <input
                             type="email"
-                            className="input w-full bg-slate-800 "
+                            className={`input w-full ${toggle && 'bg-slate-800'}`}
                             name='email'
                             placeholder="Email"
                             required
@@ -66,7 +67,7 @@ const Login = () => {
                         <label className="label">Password</label>
                         <input
                             type="password"
-                            className="input w-full bg-slate-800"
+                            className={`input w-full ${toggle && 'bg-slate-800'}`}
                             name='password'
                             placeholder="Password"
                             required
