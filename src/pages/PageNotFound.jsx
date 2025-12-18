@@ -7,6 +7,7 @@ const PageNotFound = () => {
 
     return (
         <div>
+            <title>Page Not Found</title>
             <Navbar></Navbar>
             <div className='bg-slate-900 w-full md:mx-auto flex justify-center items-center py-20 px-10'>
                 <img src={errorImg} alt="" />
