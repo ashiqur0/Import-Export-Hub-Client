@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import AuthContext from '../context/AuthContext';
 import Swal from 'sweetalert2';
+import useAuth from '../hooks/useAuth';
 
 const SignUp = () => {
 
@@ -10,6 +11,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     // console.log(location.state);
     const [passwordError, setPasswordError] = useState('');
+    const { toggle } = useAuth();
 
     const handleSignup = (e) => {
         e.preventDefault();
@@ -83,7 +85,7 @@ const SignUp = () => {
     return (
         <div className='flex justify-center items-center min-h-screen'>
             <title>Import-Export Sign up</title>
-            <div className="card bg-slate-800 w-full max-w-sm shrink-0 shadow-2xl border border-slate-700">
+            <div className={`card ${toggle && 'bg-slate-800'} w-full max-w-sm shrink-0 shadow-2xl border border-slate-700`}>
                 <h2 className='text-center text-3xl font-semibold mt-6 '>Sign up here</h2>
                 <form onSubmit={handleSignup}
                     className="card-body">
@@ -92,7 +94,7 @@ const SignUp = () => {
                         <label className="label">Name</label>
                         <input
                             type="txt"
-                            className="input full bg-slate-800"
+                            className={`input w-full ${toggle && 'bg-slate-800'}`}
                             name='name'
                             placeholder="Your Name"
                             required
@@ -101,7 +103,7 @@ const SignUp = () => {
                         <label className="label">Email</label>
                         <input
                             type="email"
-                            className="input w-full bg-slate-800"
+                            className={`input w-full ${toggle && 'bg-slate-800'}`}
                             name='email'
                             placeholder="Email"
                             required
@@ -110,7 +112,7 @@ const SignUp = () => {
                         <label className="label">Photo</label>
                         <input
                             type="txt"
-                            className="input w-full bg-slate-800"
+                            className={`input w-full ${toggle && 'bg-slate-800'}`}
                             name='photo'
                             placeholder="Photo URL"
                             required
@@ -119,7 +121,7 @@ const SignUp = () => {
                         <label className="label">Password</label>
                         <input
                             type="password"
-                            className="input w-full bg-slate-800"
+                            className={`input w-full ${toggle && 'bg-slate-800'}`}
                             name='password'
                             placeholder="Password"
                             required
