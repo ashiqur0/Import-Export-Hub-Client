@@ -14,6 +14,15 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [allProducts, setAllProducts] = useState([]);
 
+    // Theme related functionalities
+    const [toggle, setToggle] = useState(true);
+    const [theme, setTheme] = useState('dark');
+    const toggleTheme = () => {
+        toggle ? setTheme('dark') : setTheme('light');
+        setToggle(!toggle);
+        document.documentElement.setAttribute("data-theme", theme);
+    }
+
     useEffect(() => {
         axios.get('https://import-export-hub-api-server-by-ash.vercel.app/allproducts')
             .then(data => setAllProducts(data.data));
@@ -63,7 +72,8 @@ const AuthProvider = ({ children }) => {
         loading,
         setLoading,
         allProducts,
-        updateUser
+        updateUser,
+        toggleTheme, toggle
     }
 
     return (
