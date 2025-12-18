@@ -54,7 +54,7 @@ const Navbar = () => {
                         {open ? <IoCloseOutline /> : <CiMenuFries />}
                     </div>
 
-                    <ul className={`z-10 w-full text-center md:hidden flex flex-col absolute duration-1000 hover:shadow-sm py-1 rounded-sm bg-slate-900 px-4 text-white text-md
+                    <ul className={`z-10 w-full text-center md:hidden flex flex-col absolute duration-1000 hover:shadow-sm py-1 rounded-sm bg-slate-900 px-4 ${toggle ? 'text-white': 'text-black'} text-md
                         ${open ? 'top-16 right-0' : '-top-64 right-0'}
                         `}>{links}
                         {
@@ -71,7 +71,7 @@ const Navbar = () => {
                 </div>
 
                 <div>
-                    <ul className='md:flex hidden gap-8 font-semibold text-white'>
+                    <ul className={`md:flex hidden gap-8 font-semibold ${toggle ? 'text-white': 'text-black'}`}>
                         {links}
                     </ul>
                 </div>
