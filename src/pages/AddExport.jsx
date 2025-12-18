@@ -47,6 +47,7 @@ const AddExport = () => {
 
     return (
         <div className='md:max-w-7xl md:mx-auto mx-3'>
+            <title>Add Exports</title>
             <h1 className='text-2xl font-semibold my-5'>Export a product</h1>
 
             <div className='md:w-2/5 mx-auto bg-slate-800 md:p-6 p-2 rounded-xl'>
